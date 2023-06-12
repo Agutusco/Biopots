@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="../css/styles.css">
     <!-- BS ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Script EmailJS -->
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('-G6cLMmb8nxuylG2A')
+    </script>
 </head>
 <body>
     <!-- Inicia Header -->
@@ -18,9 +25,9 @@
         <nav class="main-nav float-right d-none d-lg-block">
             <ul>
                 <li><a href="#">Información</a></li>
-                <li><a href="#">Productos</a></li>
+                <li><a href="./producto.html">Producto</a></li>
                 <li><a href="#">Equipo</a></li>
-                <li><a href="../index.html" class="active">Contacto</a></li>
+                <li><a href="../index.html" class="active">Inicio</a></li>
             </ul>
         </nav>
     </header>
@@ -47,37 +54,66 @@
             </div>
         </div>
     <div class="formulario">
-        <form action="" id="formulario">
+    <form id="formulario">
         <div class="form-container">
-            <div class="form-group">
-                <label for="name">Nombre</label>
-                <input type="text" id="nombre">
-            </div>
-            <div class="form-group">
-                <label for="tel">Teléfono</label>
-                <input type="tel" id="tel">
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email">
-            </div>
-            <div class="form-group mensaje">
-                <label for="mensaje" class="label-textarea">Mensaje (opcional)</label>
-                <textarea name="mensaje" id="mensaje" cols="70" rows="10"></textarea>
-            </div>
-            <div class="enviar-form">
-                <button id="enviar" type="submit">Enviar</button>
-            </div>
-            <div>
-                <p id="aviso"></p>
-                <p id="perfecto"></p>
-            </div>
+        <div class="form-group">
+            <label for="persona">Nombre</label>
+            <input type="text" name="persona" id="persona">
         </div>
-    </form> 
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+        </div>
+        <div class="form-group">
+            <label for="tel">Teléfono</label>
+            <input type="text" name="tel" id="tel">
+        </div>
+        <div class="form-group mensaje">
+            <label for="message">Mensaje</label>
+            <textarea name="message" id="message" cols="70" rows="10"></textarea>
+        </div>
+        <div class="enviar-form">
+            <input type="submit" id="button" value="Enviar Email" >
+        </div>
+        <div>
+            <p id="aviso"></p>
+            <p id="perfecto"></p>
+        </div>
+    </div>
+        </form>
     </div>
 </div>
-    <!-- Termina Formulario  -->
-    <!-- Sweet alert JS -->
+<!-- Termina Formulario  -->
+<!-- Inicia footer -->
+<footer id="footer">
+    <div class="footer-container"> 
+        <div class="container">
+            <div class="footer-principal">
+                <div class="footer-info">
+                    <h3>Navegación</h3>
+                    <p><a href="./pages/contacto.html">Contacto</a></p>
+                    <p><a href="#equipo">Equipo</a></p>
+                    <p><a href="">Producto</a></p>
+                    <p><a href="#información">Información</a></p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contactanos</h3>
+                    <p>
+                        Colegio Santa Teresita del Niño Jesus <br>
+                        <strong>Email:</strong> biopots.ja@gmail.com
+                    </p>
+                </div>
+                <div class="ja-info">
+                    <h4>Nuestros Mentores</h4>
+                    <p>Nuestra empresa trabaja junto a Junior Achievement quiénes nos guían día a día a poder crear nuestros productos brindando instrucciones, capacitaciones y profesores expertos en organizaciones.</p>
+                    <a href="https://junior.org.ar/" target="_blank">Sitio Oficial</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Termina foooter -->
+<!-- Sweet alert JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- JS BS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>

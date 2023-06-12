@@ -1,9 +1,36 @@
+/* Inicia estilos generales */
+.hide{
+    display: none;
+}
+
+.body{
+    background-color: rgb(255, 245, 232);
+}
+
+.show{
+    display: block;
+}
+/* Termina estilos generales */
 
 .container{
     display: flex;
     justify-content: center;
 }
 
+.imagen-principal{
+    border-radius: 15px;
+}
+
+.contenedor-info-principal{
+    padding-top: 10em;
+    display: flex;
+    justify-content: center;
+}
+.contenedor-info-principal img{
+    width: 500px;
+    height: 500px;
+    margin-right: 35px;
+}
 
 /* Inicia header */
 #header{
@@ -25,7 +52,7 @@
     position: relative;
     white-space: nowrap;
     float: right;
-    margin-right: 5rem;
+    margin-right: 2rem;
 }
 
 .main-nav a{
@@ -47,20 +74,15 @@
 
 
 /* Empieza presentacion */
-#presentacion{
-    display: flex;
-    justify-content: center;
-    margin-top: 8rem;
-    margin-bottom: 8rem;
-}
 
 .info-presentacion{
-    width: 800px;
-    padding: 5rem;
+    width: 500px;
 }
 
 .info-presentacion h2{
     padding-bottom: 1.5rem;
+    width: 40px;
+    font-size: 50px;
 }
 
 /* Termina presentacion */
@@ -73,33 +95,33 @@
 
 .contenedor-inicio{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 10rem;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
 }
 
 .contenedor{
     position: relative;
     display: inline-block;
     text-align: center;
-    width: 500px;
+    width: 400px;
     height: 500px;
     overflow: hidden;
     margin: 20px;
-    border-radius: 5px;
+    border-radius: 100px;
 }
+
 
 .contenedor h3{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: black    ;
 }
 
 .contenedor button{
     position: absolute;
-    top: 75%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -121,24 +143,16 @@
 
 .boton{
     cursor: pointer;
-    border: solid black 2px;
-    background-color: red;
-    width: 26%;
+    border-radius: 15px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.52);
+    width: 80%;
     height: 11%;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: white;
+    /* color: white; */
 }
 
-.boton:hover{
-    color: red;
-    border: solid black 2px;
-    width: 26%;
-    height: 11%;
-    text-transform: uppercase;
-    font-weight: bold;
-    background-color: white;
-}
 
 /* Termina inicio */
 
@@ -243,3 +257,295 @@ input{
 }
 
 /* Termina contacto */
+
+/* Inicia equipo */
+
+
+#equipo{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-equipo{
+    display: flex;
+    justify-content: center;
+    padding-top: 15em;
+    width: 80%;
+    height: 80%;
+}
+
+.contenedor-equipo img{
+    border-radius: 20px;
+}
+
+.contenedor-equipo h2{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    font-size: 40px;
+}
+
+
+.contenedor-equipo p{
+    display: flex;
+    justify-content: center;
+}
+
+.subtitulo-equipo{
+    padding-top: 8px;
+    font-size: 17px;
+}
+
+
+
+/* Termina equipo */
+
+
+/* Inicia valores */
+.circulo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(97, 66, 28);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.circulo i{
+    font-size: 24px;
+}
+
+.contenedor-circulos{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.equipo{
+    display: flex;
+    justify-content: center;
+    margin: 15em 0px 15em 0px;
+}
+
+
+.container-circulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    text-align: center;
+}
+
+.titulo-valores{
+    display: inline-block;
+}
+/* Termina valores*/
+
+
+/* inicia informacion */
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+
+
+.card .front h3{
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #000;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    position: absolute;
+}
+
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(117, 150, 66);
+    padding: 15px;
+    color: #f3f3f3;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    border-bottom: solid 1px #f3f3f3;
+}
+
+.card .back p{
+    letter-spacing: 1px;
+}
+
+
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
+.tarjetas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#informacion{
+    margin-top: 20rem;
+}
+
+.informacion-tarjetas{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    justify-content: center;
+    align-self: center;
+    padding-bottom: 25px;
+}
+
+/* termina informacion */
+
+/* Inicia footer */
+
+#footer{
+    padding: 0 0 30px 0;
+    font-size: 14px;
+    margin-top: 20em;
+    height: 360px;
+    width: 100%;
+    background-color: antiquewhite;
+    overflow: hidden;
+}
+
+.footer-principal{
+    padding: 60px 0 30px 0;
+    display: flex;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+}
+
+.footer-contact p{
+    padding-top: 10px;
+}
+
+
+#footer a{
+    color: black;
+    text-decoration: none;
+}
+
+.ja-info p{
+    padding-top: 10px;
+}
+
+/* Termina footer */
+
+/* Inicia producto */
+.contenedor-producto{
+    padding-top: 20em;
+    display: flex;
+    justify-content: center;
+}
+
+
+.contenedor-producto img{
+    width: 400px;
+    margin-right: 35px;
+}
+
+.info-producto{
+    width: 500px;
+}
+
+.info-producto h1{
+    text-align: center;
+}
+
+
+.form-producto{
+    display: flex;
+    justify-content: center;
+    margin: 15em 0em 15em 0em;
+}
+
+.form-seccion input{
+    width: 100%;
+}
+
+.form-producto img{
+    width: 400px;
+    margin-right: 35px;
+}
+
+.form-seccion{
+    padding: 15px;
+}
+
+
+.contenedor-formulario{
+    width: 500px;
+}
+
+.submit-producto{
+    display: flex;
+    justify-content: center;
+}
+
+#error{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+    font-size: 15px;
+    color: red;
+}
+
+#bien{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+    font-size: 15px;
+    color: green;
+}
+
+/* Termina producto */
