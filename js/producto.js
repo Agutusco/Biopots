@@ -2,6 +2,8 @@
 // Uso el DOM para llamar a los elementos
 const botonIniciador = document.getElementById("botonIniciador")
 const hideForm = document.getElementById("contenedorFormularioTotal")
+const contenedorFormularioTotal = document.getElementById("contenedorFormularioTotal")
+
 
 if (botonIniciador) {
     botonIniciador.addEventListener("click", toggleText)
@@ -12,6 +14,7 @@ function toggleText() {
     if(toggleText){
         botonIniciador.classList.toggle("hide")
     }
+    contenedorFormularioTotal.scrollIntoView({ behavior: "smooth" })
 }
 
 // Hago el formulario

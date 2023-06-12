@@ -42,6 +42,12 @@
     background: antiquewhite;
 }
 
+.lista-especial{
+    float: left;
+    padding: 10px 15px;
+    white-space: nowrap;
+    list-style-type: none;
+}
 
 .main-nav, .main-nav *{
     margin: 0;
@@ -54,6 +60,8 @@
     float: right;
     margin-right: 2rem;
 }
+
+
 
 .main-nav a{
     display: block;
@@ -166,7 +174,7 @@
     grid-template-areas: 
     "info form"
     ;
-
+    margin-top: 15em;
 }
 
 .info{
@@ -177,8 +185,14 @@
     justify-self: flex-end;
     align-self: center;
     width: 300px;
-
 }
+
+.info img{
+    width: 300px;
+    height: 300px;
+    padding-bottom: 15px;
+}
+
 .info p{
     display: inline-block;
 }
@@ -209,7 +223,6 @@ a:hover{
 }
 label{
     display: inline-block;
-    /* transform: translateX(5px) */
 }
 textarea{
     display: inline-block;
@@ -302,48 +315,6 @@ input{
 /* Termina equipo */
 
 
-/* Inicia valores */
-.circulo{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: rgb(97, 66, 28);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.circulo i{
-    font-size: 24px;
-}
-
-.contenedor-circulos{
-    width: 1200px;
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-}
-
-.equipo{
-    display: flex;
-    justify-content: center;
-    margin: 15em 0px 15em 0px;
-}
-
-
-.container-circulo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 200px;
-    text-align: center;
-}
-
-.titulo-valores{
-    display: inline-block;
-}
-/* Termina valores*/
 
 
 /* inicia informacion */
@@ -530,6 +501,16 @@ input{
     justify-content: center;
 }
 
+#button{
+    border: 1px solid rgb(97, 66, 28); 
+    padding: 10px; 
+    background-color:rgb(97, 66, 28); 
+    color: #ffffff; 
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Helvetica', sans-serif;
+    border-radius: 50px;
+}
 #error{
     width: 200px;
     text-align: center;
@@ -548,4 +529,108 @@ input{
     color: green;
 }
 
+#botonIniciador{
+    border: 1px solid rgb(97, 66, 28); 
+    padding: 10px; 
+    background-color:rgb(97, 66, 28); 
+    color: #ffffff; 
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Helvetica', sans-serif;
+    border-radius: 50px;
+}
+
 /* Termina producto */
+
+
+/* Media Queries */
+
+@media screen and (max-width: 400px){
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .contenedor-info-principal{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-self: center;
+        margin-left: 30px;
+    }
+
+    .contenedor{
+        display: flex;
+        align-self: center;
+    }
+
+    #inicio{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-content: center;
+        justify-content: center;
+        align-self: center;
+        justify-self: center;
+    }
+    .contenedor-inicio{
+        display: grid;
+        grid-template-columns: 1fr;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #equipo{
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+
+    .informacion-tarjetas{
+        margin-left: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .tarjetas{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #footer{
+        display: none;
+    }
+
+    .form{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .form img, .info{
+        display: none;
+    }
+    .form-group{
+        display: flex;
+        justify-content: center;
+    }
+    .form-group label{
+        padding-right: 5px;
+    }
+}
+
+/* Tamaños de letras y familias tipograficas */
+label, p, h1, h2,h3{
+    font-family: 'Helvetica', sans-serif;
+}
+
+p{
+    font-size: 15px;
+}
+
